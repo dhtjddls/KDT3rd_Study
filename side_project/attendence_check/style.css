@@ -6,10 +6,12 @@ body {
 }
 
 ul {
+    
     list-style-type: none;
 }
 
 label {
+    
     font-size: 28px;
     margin: 5px 15px;
     vertical-align: center;
@@ -17,12 +19,20 @@ label {
 }
 
 input {
+    
     transform: scale(2.5);
     cursor: pointer;
 
 }
 
+img {
+    margin-top: -30px;
+    height: 350px;
+    margin-bottom: -100px;
+}
+
 .title {
+    
     font-weight: bold;
     font-size: 62px;
 }
@@ -37,6 +47,7 @@ input {
 .under-section {
     margin-top: 80px;
     font-size: 36px;
+
 }
 
 
@@ -66,9 +77,6 @@ button:hover {
     padding: 10px 80px;
 }
 
-.reset-btn {
-    
-}
 
 input[type="checkbox"]:nth-child(7n) {
     accent-color: green;
