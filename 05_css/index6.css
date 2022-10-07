@@ -1,0 +1,46 @@
+div {
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.div1 {
+    background-color: red;
+    top: 100px;
+    left: 100px;
+    z-index: 8;
+}
+
+.div2 {
+    top: 140px;
+    left: 140px;
+    background-color: orange;
+    z-index: 6;
+}
+
+.div3 {
+    top: 180px;
+    left: 180px;
+    background-color: yellow;
+    z-index: 6;
+}
+
+.div4 {
+    top: 220px;
+    left: 220px;
+    background-color: green;
+    z-index: 5;
+}
+
+.div5 {
+    top: 260px;
+    left: 260px;
+    background-color: blue;
+    z-index: 4;
+}

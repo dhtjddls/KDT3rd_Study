@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorFlip</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #c_bar {
+            margin-top: 200px;
+            text-align: center;
+            font-size: 56px;
+            background-color: #555;
+            border-radius: 15px;
+            padding: 10px 15px 25px;
+            color: white;
+        }
+        #target {
+            font-size: 36px;
+            padding: 15px 45px;
+            border-radius: 15px;
+            border-width: 3px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            box-shadow: 2px 2px 6px black;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        .Home li {
+            list-style-type: none;
+            font-size: 40px;
+            color: rgb(107, 206, 206);
+            font-weight: bold;
+        }
+
+        .right_container li{
+            font-size: 40px;
+            list-style-type: none;
+            margin-right: 50px;
+            font-weight: bold;
+        }
+
+        .right_container .hex:hover {
+            color: rgb(107, 206, 206);
+            cursor: pointer;
+        }
+
+        .right_container .simple:hover {
+            color: rgb(107, 206, 206);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Home">
+                <ul >
+                    <li>Color Flipper</li>
+                </ul>
+            </div>
+            <div class="right_container">
+                <ul>
+                    <li class="simple">RGB</li>
+                    <li class="hex">Hex</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1 id="c_bar">background-color</h1>
+        <button id="target">Click me</button>
+    </section>
+    <footer></footer>
+
+    <script src="./color_index.js"></script>
+</body>
+</html>

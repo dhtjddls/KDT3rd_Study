@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    
+
+</head>
+<body>
+    <!-- background color -->
+    <!--
+        p-3 -> padding 3
+        mb-3 -> marginbottom 3
+        text-white or dark -> color
+
+    -->
+    <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+    <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+    <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+    <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+    <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+    <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+    <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+    <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+    <div class="p-3 mb-2 bg-body text-dark">.bg-body</div>
+    <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+    <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+    
+    <!-- border -->
+    
+    <span class="border border-primary p-5 ms-3"></span>
+    <span class="border border-secondary p-5 ms-3"></span>
+    <span class="border border-success p-5 ms-3"></span>
+    <span class="border border-danger p-5 ms-3"></span>
+    <span class="border border-warning p-5 ms-3"></span>
+    <span class="border border-info p-5 ms-3"></span>
+    <span class="border border-light p-5 ms-3"></span>
+    <span class="border border-dark p-5 ms-3"></span>
+    <span class="border border-white p-5 ms-3"></span>
+        
+
+    <div class="mb-4">
+        <label for="my-input" class="form-label">Email address</label>
+        <input type="email" class="form-control border-success mt-5 id="my-input" placeholder="name@example.com">
+    </div>
+
+    <!-- color -->
+    <p class="text-primary">.text-primary</p>
+    <p class="text-secondary">.text-secondary</p>
+    <p class="text-success">.text-success</p>
+    <p class="text-danger">.text-danger</p>
+    <p class="text-warning bg-dark">.text-warning</p>
+    <p class="text-info bg-dark">.text-info</p>
+    <p class="text-light bg-dark">.text-light</p>
+    <p class="text-dark">.text-dark</p>
+    <p class="text-body">.text-body</p>
+    <p class="text-muted">.text-muted</p>
+    <p class="text-white bg-dark">.text-white</p>
+    <p class="text-black-50">.text-black-50</p>
+    <p class="text-white-50 bg-dark">.text-white-50</p>
+    <p class="text-bg-dark">.text-bg-color 글자색 자동 맞춤</p>
+
+    <!-- spacing -->
+    <div class="mb-5 text-warning bg-danger text-center">.text-warning</div>
+    <div class="ps-3 text-warning bg-primary text-center">.text-warning</div>
+    <br>
+    <br>
+    <!-- display -->
+
+    <!-- display: inline -->
+    <!-- 
+        w-{size}: width: size(0, 25, 50, 75, 100);
+        h-{size}: height: size(0, 25, 50, 75, 100);
+    -->
+    <div class="d-inline p-2 text-bg-primary">d-inline</div>
+    <div class="d-inline p-2 text-bg-dark">d-inline</div>
+    <br>
+    <br>
+    <!-- display: block -->
+    <span class="d-block p-2 text-bg-primary">d-block</span>
+    <span class="d-block p-2 text-bg-dark">d-block</span>
+    <br>
+
+    <!-- display: inline-block -->
+    <span class="d-inline-block p-2 text-bg-primary">d-block</span>
+    <span class="d-inline-block p-2 text-bg-dark">d-block</span>
+    
+    <!-- display: none -->
+    <span class="d-none p-2 text-bg-primary">d-block</span>
+	
+    <!-- display: flex; -->
+	<div class="parent border border-info d-flex justify-content-center align-items-center" style="height: 300px;">
+		<div class="child text-bg-danger" style="width: 100px; height: 100px;">child</div>
+		<div class="child text-bg-primary" style="width: 100px; height: 100px;">child</div>
+		<div class="child text-bg-warning" style="width: 100px; height: 100px;">child</div>
+	</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* * {
+    color: blue;
+}
+
+li {
+    color: red;
+}
+
+.orange {
+    color: rgb(251, 148, 20);
+}
+
+#orange {
+    color: #0000ff;
+}
+
+div.orange {
+    color: skyblue;
+} */
+
+/* ul, p, .orange{
+    color: greenyellow;
+}
+
+div .orange{
+    color: red;
+} */
+
+body .orange{
+    color: orange;
+}
+
+ul > .orange{
+    color: red;
+}
+
+ul + .orange{
+    color: green;
+}
+
+div.orange ~ span{
+    color: royalblue;
+}
+
+#google:hover {
+    font-weight: 700;
+    color: orange;
+    text-decoration: none;
+}
+
+#naver:active {
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #888;
+}
+
+.fruits span:first-child {
+    color: red;
+}
+
+.fruits h3:last-child {
+    color: red;
+}
+
+.fruits *:nth-child(2n-1) {
+    color: green;
+}
+
+.fruits *:not(span) {
+    color: blue;
+}
+
+.numbers {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* .numbers span:nth-child(odd){
+    color: blueviolet;
+}
+
+.numbers span:nth-child(even){
+    color: royalblue;
+} */
+
+.numbers span:nth-child(3n+4){
+    color: royalblue;
+}
+
+.test {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.test * {
+    color: gray;
+}
+
+.test span {
+    color: blue !important;
+}
+
+.test .num {
+    color: green;
+}
+
+.test #two {
+    color: purple;
+}

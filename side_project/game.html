@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 Up and Down 게임</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <style>
+      .main {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 110px;
+        font-family: 'Do Hyeon', sans-serif;
+      }
+
+      button {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        font-family: 'Do Hyeon', sans-serif;
+        font-size: 40px;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: rgb(201, 85, 85);
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <h1 class="main">숫자 Up Down 게임</h1>
+      <button onclick="startGame();">게임 시작하기</button>
+
+    <script>
+      function startGame() {
+        console.log('버튼을 클릭하셨군요! 게임을 시작합니다. 기회는 무려 여섯번!!');
+        // TODO: [게임 시작하기] 버튼을 누르면 startGame() 함수가 실행되도록 설정해두었습니다. 함수 내부 코드를 채워주세요
+        let answer = Math.floor(Math.random() * 100) + 1;
+        let count = 6;
+        while(true){
+          
+          let guessValue = prompt('UP and DOWN 게임을 시작합니다! range(1~100)').replace(" ",'');
+          
+          if (guessValue === 'q' || guessValue === '포기'){
+            alert("포기하셨습니다..");
+            break;
+          }
+          else if(guessValue.length == 0){
+            alert("공백입니다!");
+          }
+          else if(guessValue == answer){
+            alert("정답입니다!");
+            break;
+          }
+          else if(guessValue > answer) {
+            alert("Down");
+          }
+          else if(guessValue < answer) {
+            alert("Up");
+          }
+          else{
+            alert('q, 포기 혹은 숫자를 입력해주세요.');
+          }
+          
+          count -= 1
+          if (count == 0) {
+            alert(`실패! 정답은 ${answer} 였습니다!`);
+            break;
+          }
+          else if (count == 1) {
+            alert('마지막 기회에요 신중하세요!');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    background-color: #eee;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 1000px;
+    height: 400px;
+    background-color: #333;
+    margin: 0 auto;
+
+    display: flex;
+
+    /* flex-dircetion 방향 설정
+    row, 
+    column,
+    row-reverse,
+    column-reverse
+     */
+    flex-direction: column;
+
+    /* justify-content: 주축 item을 어떻게 배치할 것인가 
+    flex-start,
+    flex-end,
+    space-between 처음과 마지막에 아이템을 붙이고 나머지 영역을
+    공평하게 나눔,
+    space-around 아이템들이 모든 여백을 공평하게 나눔, 
+    space-evenly 아이템 사이의 간격이 일정
+    */
+    justify-content: flex-start;
+
+    /* align-items: 교차축에 대해 item을 어떻게 배치할 것인가? 
+    stretch (default) 늘려서 교차축을 채움
+    flex-start 교차축의 시작점
+    flex-end 교차축의 끝점
+    center 교차축의 가운데 지점
+    baseline item을 텍스트의 베이스 라인을 기준으로 정렬
+    */
+    align-items: stretch;
+
+    /* flex-wrap: 줄바꿈 처리(like inline) 
+    wrap 줄바꿈
+    wrap-reverse 줄바꿈 + 역순배치
+    */
+    flex-wrap: wrap;
+
+    /* align-content: 여러 행 정렬
+    (조건) flex-wrap: wrap 상태에서 아이템이 2줄 이상일 때 교차축 방향 설정
+    stretch
+    flex-start
+    flex-end
+    center
+    space-between
+    space-around
+    space-evenly
+    */
+
+    /* height: 300px; */
+    align-content: space-evenly;
+
+}
+
+.container > .items {
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+.item1 {
+    background-color: yellowgreen;
+}
+
+.item2 {
+    background-color: skyblue;
+}
+
+.item3 {
+    background-color: goldenrod;
+}
+
+.item4 {
+    background-color: royalblue;
+}
+
+.item5 {
+    background-color: red;
+    /* font-size: 50px; */
+}
+
+.outer {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+}
+
+.inner{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+/* transform, position version */
+.outer1 {
+    position: relative;
+}
+
+.inner1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* display:flex version */
+.outer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner2 {
+    margin: 10px;
+}

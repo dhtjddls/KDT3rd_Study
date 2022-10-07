@@ -1,0 +1,72 @@
+.topBar {
+    height: 150px;
+    align-items: center;
+    background-color: darkgoldenrod;
+}
+
+.sidebar-sticky {
+    height: 100vh;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+
+}
+
+.nav-item a:hover {
+    font-weight: bold;
+    width: 200px;
+}
+
+.nav-item {
+    width: 100px;
+}
+
+aside {
+    width: 100%;
+    background-color: darkgoldenrod;
+}
+
+.content {
+    width: 100%;
+    background-color: rgb(58, 56, 56);
+    
+}
+
+.card {
+    margin: 40px 40px;
+    height: 400px;
+    border: 2px solid darkgoldenrod;
+    background-color: black;
+    color: white;
+}
+
+.card-btn {
+    background-color: darkgoldenrod;
+}
+
+img {
+    overflow: hidden;
+    padding: 10px 5px 0;
+    border-radius: 5px;
+}
+
+.side-container {
+    padding: 0;
+}
+
+.header-container {
+    background-color: rgb(59, 55, 55);
+    overflow: hidden;
+    margin: 0;
+}
+.top {
+    padding: 0;
+}
+
+h3 {
+    color: white;
+
+}
+
+svg{
+    overflow: hidden;
+}

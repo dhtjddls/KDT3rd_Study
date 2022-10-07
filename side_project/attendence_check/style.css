@@ -1,0 +1,55 @@
+
+
+body {
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+label {
+    font-size: 28px;
+    margin: 5px 15px;
+    vertical-align: center;
+}
+
+input {
+    transform: scale(2.5);
+
+}
+
+.title {
+    font-weight: bold;
+    font-size: 62px;
+}
+
+.sub-title {
+    font-size: 42px;
+}
+
+input[type="checkbox"] {
+    accent-color: red;
+    } 
+
+
+.under-section {
+    margin-top: 100px;
+    font-size: 36px;
+}
+
+
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+}
+
+.cal-btn {
+
+}
+
+.reset-btn {
+    
+}

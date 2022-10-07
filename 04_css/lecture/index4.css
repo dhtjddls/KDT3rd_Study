@@ -1,0 +1,43 @@
+/* * {
+    color: blue;
+}
+
+li {
+    color: red;
+}
+
+.orange {
+    color: rgb(251, 148, 20);
+}
+
+#orange {
+    color: #0000ff;
+}
+
+div.orange {
+    color: skyblue;
+} */
+
+/* ul, p, .orange{
+    color: greenyellow;
+}
+
+div .orange{
+    color: red;
+} */
+
+body .orange{
+    color: orange;
+}
+
+ul > .orange{
+    color: red;
+}
+
+ul + .orange{
+    color: green;
+}
+
+div.orange ~ span{
+    color: royalblue;
+}

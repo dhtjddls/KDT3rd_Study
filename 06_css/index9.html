@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index9.css">
+</head>
+<body>
+    <h1>CSS display 속성에 대해 알아보자!</h1>
+    <ul>
+        <li>요소를 화면에 어떻게 보여줄지 결정하는 속성</li>
+        <li>html에는 block과 inline요소 나눔</li>
+    </ul>
+
+    <hr>
+    <h2>inline요소</h2>
+    <ol>
+        <li>ex: span, a, img</li>
+        <li>content 만큼 공간 할당 -> width, padding, margin 사용 x</li>
+        <li>줄바꿈 없이 바로 옆에 배치</li>
+
+    </ol>
+
+    <div class="d-inline1">d-inline1 클래스를 갖는 div</div>
+    <div class="d-inline2">d-inline2</div>
+
+    <hr>
+    <h2>block요소</h2>
+    <ol>
+        <li>ex: div, p, ul, ol</li>
+        <li>한 줄을 다 차지함 -> width, padding, margin 사용 O</li>
+
+    </ol>
+
+    <div class="d-block1">d-blcok1 클래스를 갖는 div</div>
+    <div class="d-block2">d-blcok2</div>
+
+    <hr>
+    <h2>inline-block요소</h2>
+    <ol>
+        <li>block요소 처럼 크기 지정은 하되</li>
+        <li>inline요소 처럼 다른 내용들과 같은 줄을 공유하고 싶은 경우</li>
+        <li>inline요소를 width, height padding, margin으로 디자인하고 싶거나 div요소들을 좌우로 나열하고 싶을 때 유용합니다</li>
+
+    </ol>
+
+    <div class="d-inline-block1">d-inline-blcok1 클래스를 갖는 div</div>
+    <div class="d-inline-block2">d-inline-blcok2</div>
+
+    <hr>
+    <h2>none</h2>
+    <ol>
+        <li>사라져라 얍!</li>
+        <li>주의) 요소가 차지하는 공간도 사라짐</li>
+        <li>block 요소는 사라져도 뭐 상관 없는데 inline 요소는 사라지면 다른 애들이 땡겨지겠죠?
+        </li>
+    </ol>
+    
+    <div class="d-none">
+        none
+    </div>
+</body>
+</html>

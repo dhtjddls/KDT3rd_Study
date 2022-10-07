@@ -1,0 +1,49 @@
+.d-inline1,
+.d-inline2 {
+    background-color: pink;
+}
+
+.d-inline1 {
+    display: inline;
+    background-color: red;
+}
+
+.d-inline2 {
+    display: inline;
+    background-color: blue;
+}
+
+.d-block1 {
+    background-color: red;
+}
+
+.d-block2 {
+    background-color: blue;
+}
+
+.d-inline-block1 {
+    display: inline-block;
+    background-color: red;
+    padding: 15px;
+}
+
+.d-inline-block2 {
+    display: inline-block;
+    background-color: yellowgreen;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.d-inline-block2:hover,
+.d-inline-block2:focus {
+    color: rgb(161, 147, 12);
+    box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.25em)
+}
+
+.d-none {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+}

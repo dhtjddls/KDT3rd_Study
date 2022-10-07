@@ -1,0 +1,17 @@
+.beach1 {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 150px;
+    top: 200px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+img:hover{
+    transition: transforms 1s;
+    translate: ();
+}

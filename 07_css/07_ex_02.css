@@ -1,0 +1,15 @@
+.word{
+    font-size: 24px;
+    animation: slidein 2.5s ease-in-out;
+}
+
+@keyframes slidein {
+    0%{
+        width: 300%;
+        margin-left: 100%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

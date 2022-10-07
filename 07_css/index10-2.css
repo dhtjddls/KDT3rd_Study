@@ -1,0 +1,195 @@
+/* 
+    transition vs animaiton
+    - hover, onclick 이벤트에 의해 발생
+    - transition: 변화될 스타일을 지정
+
+    - animation: 중간 중간 구간 설정 가능
+    - animaiton 중복 적용 가능
+*/
+
+
+/* animation
+    
+    animaiton-name: @keyframes에 지정한 애니메이션 이름
+        - 시작: from or 0%
+        - 중간: 0 ~ 100%
+        - 끝: to or 100%
+    animaiton-duration: 한 사이클 지속 시간
+    animaiton-delay: 대기 시간
+    animaiton-interation-count: 반복 횟수
+    animaiton-timing-function: 빠르기 지정
+        - ease, linear, ease-in, ease-out, ease-in-out
+    animaiton-direction: 애니메이션 종료 후, 진행할 방향 지정
+        - normal, reverse, alternate, alternate-reverse
+*/
+
+h3 {
+    margin: 0;
+    position: relative;
+    top: 215px;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+
+.container {
+    width: 500px;
+    height: 100px;
+    padding: 15px;
+    background-color: #666;
+    border-radius: 15px;
+}
+
+.box {
+    
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border-radius: 15px;
+    animation: slide 4s ease infinite;
+}
+
+@keyframes slide {
+    0% {
+
+    }
+    25% {
+        margin-left: 200px;
+        transform: rotate(180deg);
+    }
+    50% {
+        margin-left: 400px;
+        transform: rotate(360deg);
+    }
+    75% {
+        margin-left: 200px;
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.square {
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: darkgreen;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color:darkgreen;
+    border: white 15px dotted;
+    border-radius: 50%;
+
+    position: relative;
+    top: 250px;
+    left: 250px;
+    animation: circle 2s linear infinite;
+}
+
+@keyframes circle {
+    from {
+        transform:translate(-50%, -50%) rotate(0);
+    }
+    to {
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+    left: 100px;
+    top: 50px;
+
+    animation: bounce1 1s ease-in infinite alternate;
+}
+
+@keyframes bounce1 {
+    from {
+
+    }
+
+    to {
+        top: 135px;
+    }
+}
+
+.ball2 {
+    width: 200px;
+    height: 200px;
+    background-color: darkred;
+    position: fixed;
+    border-radius: 50%;
+    left: 80%;
+    animation: bounce2 1.5s infinite;
+}
+
+@keyframes bounce2 {
+    from,
+    to {
+        bottom: 0px;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        bottom: 300px;
+        animation-timing-function: ease-in;
+    }
+}
+
+.line{
+    position: relative;
+    left: 500px;
+    width: 0px;
+    height: 20px;
+}
+
+.pal {
+    background-color: red;
+    animation: harmony 2s 0s infinite ease-in-out;
+}
+.ju{
+    background-color: orange;
+    animation: harmony 2s 0.25s infinite ease-in-out;
+}
+.no{
+    background-color: yellow;
+    animation: harmony 2s 0.5s infinite ease-in-out;
+}
+.cho{
+    background-color: green;
+    animation: harmony 2s 0.75s infinite ease-in-out;
+}
+.pa{
+    background-color: blue;
+    animation: harmony 2s 1s infinite ease-in-out;
+}
+.nam{
+    background-color: darkblue;
+    animation: harmony 2s 1.25s infinite ease-in-out;
+}
+.bo{
+    background-color: violet;
+    animation: harmony 2s 1.5s infinite ease-in-out;
+}
+
+@keyframes harmony {
+    0% {    
+        width: 0px;
+    }
+    50% {
+        width: 100px;
+    }
+    100% {
+        width: 0px;
+    }
+}
