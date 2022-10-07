@@ -42,6 +42,7 @@ input {
 .btn-section {
     display: flex;
     justify-content: center;
+    
 }
 
 button {
@@ -50,6 +51,15 @@ button {
     padding: 10px 80px;
     margin: 0 30px;
     border-radius: 22px;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    border-image: transparent;
+}
+
+button:hover {
+    
 }
 
 .cal-btn {
