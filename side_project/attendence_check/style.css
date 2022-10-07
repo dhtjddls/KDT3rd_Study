@@ -33,7 +33,7 @@ input {
 
 
 .under-section {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 36px;
 }
 
@@ -47,7 +47,9 @@ input {
 button {
     font-family: 'Do Hyeon', sans-serif;
     font-size: 28px;
-    
+    padding: 10px 80px;
+    margin: 0 30px;
+    border-radius: 22px;
 }
 
 .cal-btn {
@@ -55,8 +57,7 @@ button {
 }
 
 .reset-btn {
-
-
+    
 }
 
 input[type="checkbox"]:nth-child(7n) {
