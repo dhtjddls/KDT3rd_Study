@@ -44,12 +44,19 @@ input {
     justify-content: center;
 }
 
-.cal-btn {
+button {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 28px;
+    
+}
 
+.cal-btn {
+    padding: 10px 80px;
 }
 
 .reset-btn {
-    
+
+
 }
 
 input[type="checkbox"]:nth-child(7n) {
@@ -79,3 +86,7 @@ input[type="checkbox"]:nth-child(7n+5) {
 input[type="checkbox"]:nth-child(7n+6) {
     accent-color: purple;
     } 
+
+
+
+    
