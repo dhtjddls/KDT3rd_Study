@@ -10,10 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 </head>
-<body>
-    <img src="./image/rainbow.png" alt="">
+<body class="">
     <header>
+        <input type="radio" class="dark-toggle">
+        <span class="mode-word">다크모드</span>
         <h1 class="title">출석 체크</h1>
+
     </header>
     <section>
         <h2 class="sub-title">인 원</h2>
@@ -84,14 +86,13 @@
                 <li class="nonStu">없는 사람 :</li>
             </ul>
             <div class="btn-section">
-                <button class="cal-btn">계산</button>
-                <form action="" class="reset-btn">
-                    <button>리셋</button>
-                </form>
+                <button class="cal-btn button">계산</button>
+                <button class="re-btn button">리셋</button>
             </div>
         </div>
     </footer>
-    
+    <button class="tips">TIPS!</button>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>

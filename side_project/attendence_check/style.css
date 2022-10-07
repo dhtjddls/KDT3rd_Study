@@ -19,7 +19,6 @@ label {
 }
 
 input {
-    
     transform: scale(2.5);
     cursor: pointer;
 
@@ -30,6 +29,31 @@ img {
     height: 350px;
     margin-bottom: -100px;
 }
+
+.dark-mode {
+    background-color: rgb(44, 43, 43);
+    color: white;
+}
+
+.dark-mode .dark-toggle {
+    
+    accent-color: black;
+}
+
+.dark-toggle {
+    accent-color: white;
+    position: absolute;
+    left: 90%;
+    transform: scale(3.5);
+}
+
+.mode-word {
+    font-size: 32px;
+    position: absolute;
+    left: 84%;
+    top: 33px;
+}
+
 
 .title {
     
@@ -58,7 +82,7 @@ img {
     
 }
 
-button {
+.button {
     font-family: 'Do Hyeon', sans-serif;
     font-size: 28px;
     padding: 10px 80px;
@@ -67,7 +91,7 @@ button {
     border: 5px solid;
 }
 
-button:hover {
+.button:hover {
     cursor: pointer;
     background-image: linear-gradient(45deg, red, orange, yellow, green, blue, darkblue, purple);
     box-shadow: 3px 3px 3px 3px;
@@ -76,6 +100,23 @@ button:hover {
 .cal-btn {
     padding: 10px 80px;
 }
+
+.tips {
+    color: red;
+    margin-left: 80%;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: transparent;
+}
+
+.tips:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 3px 3px;
+}
+
 
 
 input[type="checkbox"]:nth-child(7n) {
@@ -105,7 +146,3 @@ input[type="checkbox"]:nth-child(7n+5) {
 input[type="checkbox"]:nth-child(7n+6) {
     accent-color: purple;
     } 
-
-
-
-    
