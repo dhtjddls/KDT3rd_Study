@@ -29,9 +29,7 @@ input {
     font-size: 42px;
 }
 
-input[type="checkbox"] {
-    accent-color: red;
-    } 
+
 
 
 .under-section {
@@ -53,3 +51,31 @@ input[type="checkbox"] {
 .reset-btn {
     
 }
+
+input[type="checkbox"]:nth-child(7n) {
+    accent-color: green;
+    } 
+
+input[type="checkbox"]:nth-child(7n+1) {
+    accent-color: red;
+    } 
+
+input[type="checkbox"]:nth-child(7n+2) {
+    accent-color: blue;
+    } 
+
+input[type="checkbox"]:nth-child(7n+3) {
+    accent-color: orange;
+    } 
+
+input[type="checkbox"]:nth-child(7n+4) {
+    accent-color: darkblue;
+    } 
+
+input[type="checkbox"]:nth-child(7n+5) {
+    accent-color: yellow;
+    } 
+
+input[type="checkbox"]:nth-child(7n+6) {
+    accent-color: purple;
+    } 
