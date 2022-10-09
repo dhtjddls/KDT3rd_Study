@@ -2,7 +2,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;   
-    background-color: rgb(94, 118, 250); 
+    
+}
+
+.run-mode {
+    background-color: tomato; 
+}
+
+.break-mode {
+    background-color: #333;
 }
 
 .title {
@@ -20,26 +28,29 @@ body {
 .btn {
     color: white;
     font-size: 75px;
-    margin-right: 30px;
+    margin-right: 40px;
     padding: 10px 60px; 
     border-radius: 70px;
     border: 3px solid white;
 }
 
-.btn-section .twfive{
+.btn-section {
+    display: flex;
+    justify-content: center;
+}
 
+.btn-section .start{
     background-color: green;
+    margin-left: 50px;
 }
 
-.btn-section .stop{
-    background-color: tomato;
-}
 
-.btn-section .five{
-    background-color: rgba(255, 255, 0, 0.795);
+.btn-section .reset{
+    background-color: red;
 }
 
 .btn:hover {
     cursor: pointer;
     box-shadow: 0 0 3px 3px;
 }
+
