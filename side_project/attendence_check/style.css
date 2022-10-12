@@ -42,15 +42,20 @@ img {
 
 .dark-toggle {
     accent-color: white;
-    position: absolute;
-    left: 90%;
-    transform: scale(3.5);
+    transform: scale(2);
+}
+
+.mode-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-left: 3px;
 }
 
 .mode-word {
-    font-size: 32px;
-    position: absolute;
-    left: 84%;
+    margin-top: 3px;
+    margin-right: 10px;
+    font-size: 24px;
     top: 33px;
 }
 
