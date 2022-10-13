@@ -19,4 +19,4 @@ squre.click(function() {
         cnt = 0
         squre.removeClass('bg-blue');
     }
-})
+});

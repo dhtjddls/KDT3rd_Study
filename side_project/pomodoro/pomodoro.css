@@ -19,6 +19,14 @@ body {
     margin-top: 50px;
 }
 
+.alert-section {
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+}
+
 .timer {
     margin-top: 60px;
     font-size: 150PX;
@@ -27,7 +35,7 @@ body {
 
 .btn {
     color: white;
-    font-size: 75px;
+    font-size: 60px;
     margin-right: 40px;
     padding: 10px 60px; 
     border-radius: 70px;
@@ -41,7 +49,7 @@ body {
 
 .btn-section .start{
     background-color: green;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 
