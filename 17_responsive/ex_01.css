@@ -1,0 +1,73 @@
+:root {
+    --height-header: 100px;
+}
+
+
+/* basic tag option */
+body {
+    box-sizing: border-box;
+    /* contetnt + padding + border => 크기로 계산 */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* header 설정 */
+
+header {
+    background-color: rgb(59, 141, 212);
+    height: var(--height-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.icon-menu {
+    display: block;
+    font-size: 32px;
+}
+
+.list-menu {
+    display: none;
+}
+
+.list-menu > a {
+    margin-left: 16px;
+}
+
+/* 토글 메뉴 */
+
+.toggle-menu {
+    display: block;
+    background-color: yellowgreen;
+}
+
+.toggle-menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-menu-container > a{
+    margin: 12px 0;
+    padding: 0 2rem;
+}
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .icon-menu {
+        display: none;
+    }
+    .list-menu {
+        display: block;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+}
