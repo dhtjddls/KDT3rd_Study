@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+    span {
+        color: blue;
+        font-weight: 700;
+    }
+    </style>
+</head>
+<body>
+    <div><span><%= result.username %></span>님 환영합니다!</div>
+    <div>성별은 <span><%= result.gender %></span>이군요!!</div>
+    <div>생년월일은 <span><%= result.birthYear %>년</span> <span><%= result.birthMonth %>월</span> <span><%= result.birthDay %>일</span>이군요!!</div>
+    <div>관심사는 <span><%= result.hobby%></span>이군요!!</div>
+
+    <br />
+    <br />
+    <a href="/">홈으로 이동하기</a>
+</body>
+</html>
