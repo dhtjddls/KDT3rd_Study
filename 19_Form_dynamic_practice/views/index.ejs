@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <!-- axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <form name="userProfile" method="get" onsubmit="return false">
+        <fieldset>
+            <label for="id">ID: </label>
+        <input type="text" name="id" id="id" required>
+        <br>
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw" required>
+        </fieldset>
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" id="male" value="male" required/>
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">여자</label>
+        </fieldset>
+        <br />
+    
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="birthYear" id="year">
+            <% for (let i = 0; i < 50; i++) { %>
+            <option value="<%= 2010 - i %>"><%= 2010 - i %></option>
+            <% } %>
+            </select>
+            <label for="year">년</label>
+            <select name="birthMonth" id="month">
+            <% for (let i = 1; i < 13; i++) { %>
+            <option value="<%= i %>"><%= i %></option>
+            <% } %>
+            </select>
+            <label for="month">월</label>
+            <select name="birthDay" id="day">
+            <% for (let i = 1; i < 31; i++) { %>
+            <option value="<%= i %>"><%= i %></option>
+            <% } %>
+            </select>
+            <label for="day">일</label>
+        </fieldset>
+        <br />
+        <button type="submit" onclick="getUserProfile()">제출</button>
+    </form>
+    <div class="result"></div>
+
+
+    <script>
+        const resultBox = document.querySelector('.result');
+        function getUserProfile() {
+            const userForm = document.forms['userProfile'];
+            const data = {
+                id : userForm.id.value,
+                pw : userForm.pw.value,
+                gender : userForm.gender.value,
+                birth : `${userForm.birthYear.value}.${userForm.birthMonth.value}.${userForm.birthDay.value}`,
+            }
+
+            axios({
+                method : 'get',
+                url : '/userProfile',
+                params: data, // get 정보는 params 에 실어서 보내야함 post 는 data;
+            }).then((response) => {
+                console.log(response);
+                resultBox.textContent = `${response.data.id}님 가입을 환영합니다!`;
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .sucess {
+            color: blue;
+            font-weight: 700;
+        }
+        .error {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <form name="loginForm" method="post" onsubmit="return false">
+        <label for="id">아이디: </label>
+        <input type="text" name="id" id="id" required>
+        <br>
+        <label for="pw">패스워드: </label>
+        <input type="password" name="pw" id="pw" required>
+        <br>
+        <button type="submit" onclick="login()">제출</button>
+        <div class="result"></div>
+    </form>
+
+    <script>
+        const resultBox = document.querySelector('.result');
+        function login() {
+            userForm = document.forms['loginForm'];
+            data = {
+                id : userForm.id.value,
+                pw : userForm.pw.value,
+            }
+
+
+            if(userForm.id.checkValidity() && userForm.pw.checkValidity()){
+                axios({
+                method : 'post',
+                url : '/login',
+                data : data,
+                })
+                .then((response) => {
+                    if (response.data === true){
+                        resultBox.classList.add('sucess');
+                        resultBox.classList.remove('error');
+                        resultBox.innerText = "로그인 성공!";
+                    }
+                    else{
+                        resultBox.classList.remove('sucess');
+                        resultBox.classList.add('error');
+                        resultBox.innerText = "로그인 실패!";
+                    }
+                })
+            }
+            else {
+                resultBox.classList.remove('sucess');
+                resultBox.classList.remove('error');
+                resultBox.textContent = `입력값을 올바로 똑바로 제대로 정확하고 알맞게 입력해주세요 ^^`;
+            }
+        }
+    </script>
+</body>
+</html>
