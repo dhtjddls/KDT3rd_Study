@@ -10,8 +10,8 @@
     <a href="/">홈으로 이동하기</a>
 
     <ul>
-        <% for (i=0; i < commentsInfos.length; i++) {%>
-            <li><%= commentsInfos[i].userid %> - <a href="/comment/<%= i + 1%>"><%= commentsInfos[i].comment %></a></li>
+        <% for (i=0; i < commentInfos.length; i++) {%>
+            <li><%= commentInfos[i].userid %> - <a href="/comment/<%= i + 1%>"><%= commentInfos[i].comment %></a></li>
         <% } %>
     </ul>
 </body>
