@@ -138,3 +138,12 @@ UPDATE user SET address = "제주특별자치도 제주시", name = "이지현" 
 
 DELETE FROM user WHERE id = 11;
 DELETE FROM user WHERE id > 8;
+
+
+-- ##################################################
+-- DCL
+-- Data Control Language
+
+-- GRANT: 특정 작업에 대한 수행 권한을 부여해주는 명령어
+-- REVORKE: 권한을 회수, 박탈하는 명령어
+
