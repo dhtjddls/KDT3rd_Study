@@ -14,3 +14,7 @@ app.use(express.json());
 app.get('/', function (req, res) {
     res.render('index');
 })
+
+app.get('/loginS', (req, res) => {
+    res.render('loginS');
+})

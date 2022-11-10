@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+.card {
+    color: white;
+    margin: 25vh auto ;
+    width: 33vw;
+    height: 50vh;
+    background-color: rgb(19, 95, 182);
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    border: 2px solid white
+}
+
+.abox {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 13vh;
+}
+
+.abox a {
+    margin: 0 auto;
+    width: 16vw;
+    background-color: rgb(90, 136, 221);
+    margin-top: 6px;
+    padding: 0.3rem 0.3rem ;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
