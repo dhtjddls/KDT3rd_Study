@@ -29,11 +29,10 @@ CREATE TABLE 테이블명 (
 -- PRIMARY KEY: 기본키!
 -- DEFAULT: 기본 값
 -- UNIQUE: 중복 허용 x
-CREATE TABLE user (
+CREATE TABLE visitor (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(10) NOT NULL,
-    age INT NOT NULL,
-    address VARCHAR(100) NOT NULL
+    commit mediumtext,
 );
 
 -- 테이블 조회
