@@ -1,0 +1,50 @@
+.chat-list {
+    background-color: skyblue;
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    overflow-y: scroll;
+    
+}
+
+.chat-list div {
+    margin-top: 3px;
+}
+
+.chat-list div div {
+    word-break: break-all;
+    display: inline-block;
+    padding: 3px;
+}
+
+.my-chat {
+    text-align: right;
+}
+
+.my-chat div {
+    background-color: yellow;
+}
+
+.other-chat div {
+    background-color: white;
+}
+
+.secret-chat div {
+    background-color: pink;
+}
+
+.notice {
+    text-align: center;
+    color: navy;
+    font-size: 12px;
+}
+
+.user-list {
+    width: 20%;
+    height: 500px;
+    background-color: #999;
+}
+
+.d-none {
+    display: none;
+} 

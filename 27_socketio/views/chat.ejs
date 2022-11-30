@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>채팅 프로그램</title>
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <!-- socket.io cdn -->
+    <script
+    src="https://cdn.socket.io/4.5.3/socket.io.min.js"
+    integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi"
+    crossorigin="anonymous"
+    ></script>
+
+    
+</head>
+<body>
+    <h1>Socket.io</h1>
+
+    <!-- [실습44-2] 채팅창 입장 문구 안내 socket.it -> nickname -->
+    <div class="entry-box">
+    <input type="text" id="nickname" placeholder="닉네임" autofocus />
+    <button type="button" class="entry" onclick="entry();">입장</button>
+    </div>
+
+    <!-- [실습43] 채팅창 UI 만들기 -->
+    <div class="chat-box d-none">
+    <div id="chat-list" class="chat-list">
+        <!-- [실습43] 임시 데이터 -->
+        <!-- <div class="my-chat">
+        <div>user1: msg1</div>
+        </div>
+        <div class="other-chat">
+        <div>user2: msg2</div>
+        </div>
+        <div class="notice">xx가 입장했습니다.</div> -->
+    </div>
+    <select id="nick-list">
+        <option value='all'>전체</option>
+    </select>
+    <input type="text" id="message" />
+    <button type="button" class="send" onclick="send();">전송</button>
+    </div>
+    <div class="user-list-tab d-none">
+        <div class="user-cnt"></div>
+        <ul class="user-list">
+            
+        </ul>
+    </div>
+
+    <script>
+    let socket = io.connect(); // socket 사용을 위한 객체 생성
+    let myNick; // 내 닉네임 설정
+
+    socket.on('connect', () => {
+        console.log('**** ⭕ Client Socket Connected >>', socket.id);
+    });
+
+    // [실습44] 채팅창 입장 안내 문구
+    // notice 이벤트를 받아서 공지 문구를 출력
+    socket.on('notice', (msg) => {
+        console.log('socket on notice >> ', msg);
+
+        document
+        .querySelector('#chat-list')
+        .insertAdjacentHTML('beforeend', `<div class="notice">${msg}</div>`);
+    });
+
+    let entryInput = document.getElementById('nickname');
+    
+
+    entryInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13){
+        event.preventDefault();
+        document.querySelector(".entry").click();
+    }
+    })
+
+    // [실습44-2] 채팅창 입장 안내 문구 socket.id -> nickname
+    function entry() {
+        if (entryInput.value === ''){
+        return alert('값을 입력해주세요');
+    }
+        if (entryInput.value.length > 12){
+            entryInput.value = '';
+            return alert('닉네임이 너무 깁니다. 다시 입력하세요!');
+        }
+
+        // console.log(document.querySelector('#nickname').value);
+        socket.emit('setNick', document.querySelector('#nickname').value);
+    }
+
+    socket.on('entrySuccess', (nick) => {
+        myNick = `${nick}`;
+
+        // 입력창 비활성화
+        document.querySelector('#nickname').disabled = true;
+        // [입장] 버튼 비활성화
+        document.querySelector('.entry-box > button').disabled = true;
+        // 채팅 박스를 보여줌
+        document.querySelector('.chat-box').classList.remove('d-none');
+        document.querySelector('.user-list-tab').classList.remove('d-none');
+    });
+
+    // 'error' 이벤트 받기 -> on
+    // alert() 메세지 출력
+    socket.on('error', (data) => {
+        alert(data);
+    });
+
+    // [실습45] 채팅창 메세지 전송 Step1
+    // "send" 이벤트 전송하기
+    let messageInput = document.querySelector('#message');
+
+    messageInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13){
+        event.preventDefault();
+        document.querySelector(".send").click();
+    }
+    
+    })
+    function send() {
+        if (messageInput.value === ''){
+        return 
+        }
+
+        if(document.querySelector('#nick-list').value !== 'all') {
+            const data = {
+            myNick: myNick,
+            dm : document.querySelector('#nick-list').value,
+            msg: document.querySelector('#message').value,
+            };
+            socket.emit('send', data);
+            messageInput.value = '';
+        }
+        else {
+            const data = {
+            myNick: myNick,
+            msg: document.querySelector('#message').value,
+            };
+            socket.emit('send', data);
+            messageInput.value = '';
+        }
+    }
+
+    // [실습45] 채팅창 메세지 전송 Step2
+    // "newMessage" 이벤트를 전달받기 { 닉네임, 메세지내용 }
+    // data => { nick: 'a', msg: 'hello' }
+    socket.on('newMessage', (data) => {
+        let date = new Date();
+        console.log('socket on newMessage >> ', data);
+
+        let chatList = document.querySelector('#chat-list'); // #chat-list 선택
+        let div = document.createElement('div'); // .my-chat or .other-chat 생성
+        // <div></div>
+        let divChat = document.createElement('div'); // 가장 안쪽 div (메세지 박스) 생성
+        let chatTime = document.createElement('div');
+        chatTime.innerHTML = `${date.getHours()} : ${date.getMinutes()}`
+        // <div></div>
+        if (myNick === data.nick) {
+        div.classList.add('my-chat'); // <div class="my-chat"></div>
+        } else {
+        div.classList.add('other-chat'); // <div class="other-chat"></div>
+        }
+
+        if (data.dm) {
+            div.classList.add('secret-chat');
+            divChat.textContent = `${data.dm} `;
+        }
+
+        divChat.textContent += `${data.nick} : ${data.msg}`; // <div>nick : msg</div>
+        div.append(divChat);
+        chatList.append(chatTime);
+        chatList.append(div);
+        chatList.scrollTop = chatList.scrollHeight;
+        messageInput.value = '';
+    });
+
+    
+    socket.on('updateNicks', (nickArr) => {
+        let userList = document.querySelector('.user-list');
+        let options = `<option value="all">전체</option>`;
+        let user = '';
+        
+        // 1. 반복문 사용해서 option 태그 하나하나 완성
+
+        console.log(nickArr);
+        for (const key in nickArr) {
+        // options = options + `<option value="${key}">${nickArray[key]}</option>`; // x = x + 1
+        if (socket.id === key) {
+            user = `<li>${nickArr[key]}(본인)</li>`.concat(user)
+            options += `<option value="${key}">${nickArr[key]}(본인)</option>`; 
+        }
+        else {
+            options += `<option value="${key}">${nickArr[key]}</option>`; 
+            user += `<li>${nickArr[key]}</li>`
+        }
+        }
+
+        // 2. select 태그에 option 태그들을 추가
+        // select태그.innerHTML = options;
+        document.querySelector('#nick-list').innerHTML = options;
+        userList.innerHTML = user;
+        document.querySelector('.user-cnt').innerText = `사용자수: ${Object.keys(nickArr).length}`;
+    });
+
+    </script>
+</body>
+</html>
